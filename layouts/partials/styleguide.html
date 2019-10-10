@@ -1,0 +1,428 @@
+<div class="styleguide__wrapper">
+
+  <h1 class="section-component__title">Styleguide</h1>
+
+  <h2 class="section-component__subtitle">Typography</h2>
+
+  <!-- HEADERS -->
+  <section class="styleguide__section-component">
+
+    <h1 class="styleguide__section-component__title">Headers</h1>
+
+    <h2 class="styleguide__header__faux-h1"> Header 1 <span class="styleguide__header-span">32 px</span></h2>
+
+    <h2> Header 2 <span class="styleguide__header-span">28 px</span></h2>
+
+    <h3> Header 3 <span class="styleguide__header-span">25 px</span></h3>
+
+    <h4> Header 4 <span class="styleguide__header-span">21 px</span></h4>
+
+    <h5> Header 5 <span class="styleguide__header-span">18 px</span></h5>
+
+    <h6> Header 6 <span class="styleguide__header-span">14 px</span></h6>
+
+  </section>
+
+  <!-- Content text -->
+  <section class="styleguide__section-component">
+
+    <h1 class="styleguide__section-component__title">Content Text</h1>
+
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris plarat leifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean    fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna.</p>
+
+  </section>
+
+  <h2 class="section-component__subtitle">More Arrow</h2>
+
+  <!-- More Arrow -->
+  <section class="styleguide__section-component">
+
+    <div class="styleguide-component__morearrow-wrapper">
+      <MoreArrow></MoreArrow>
+    </div>
+
+  </section>
+
+  <h2 class="section-component__subtitle" id="next">Colours</h2>
+
+  <!-- Colours -->
+  <section class="styleguide__section-component">
+
+    <h1 class="styleguide__section-component__title">Main</h1>
+
+    <span class="styleguide__colour-block styleguide__colour-block--brand">#0098a6</span>
+    <span class="styleguide__colour-block styleguide__colour-block--brand-light">#44c1c1</span>
+    <span class="styleguide__colour-block styleguide__colour-block--brand-dark">#007382</span>
+    <span class="styleguide__colour-block styleguide__colour-block--brand-complementary">#fbae31</span>
+    <span class="styleguide__colour-block styleguide__colour-block--black">#000000</span>
+    <span class="styleguide__colour-block styleguide__colour-block--white">#FFFFFF</span>
+
+  </section>
+
+  <!-- Links -->
+  <h2 class="section-component__subtitle">Links</h2>
+
+  <section class="styleguide__section-component">
+
+    <a href="#" class="link__button-black">Link</a>
+
+    <a href="#" class="link__button-black-secondary">Link</a>
+
+  </section>
+
+  <!-- DatePicker -->
+  <h2 class="section-component__subtitle">DatePicker</h2>
+
+  <section class="styleguide__section-component">
+    {{ partial "reservation.html" . }}
+  </section>
+
+  <!-- TEASERS -->
+  <h2 class="section-component__subtitle">Teasers</h2>
+
+  <section class="styleguide__section-component">
+    <h1 class="styleguide__section-component__title">Image with text-overlay</h1>
+
+    <div class="teaser__wrapper">
+
+      <div class="teaser__text">
+        <p class="teaser__text-content">Some text over the image</p>
+        <p class="teaser__text-content teaser__text-content__link"><a href="#" class="link__button-white-secondary">Link</a></p>
+      </div>
+
+      <SrcSet
+        className="teaser__element"
+        src="/media/uploads/example.jpg"
+        sizes="
+          (max-width: 1024px) 100vw,
+          1024px" ></SrcSet>
+
+    </div>
+
+  </section>
+
+  <!-- Teaser slider -->
+  <h2 class="section-component__subtitle">Slider</h2>
+
+  <section class="styleguide__section-component">
+
+    <SlideShow
+      autoplay="true"
+      speed="1200"
+      sizes="
+        (max-width: 1024px) 100vw,
+        1024px"
+    >
+      <SlideShowSlide
+        title="First Slide"
+        image="/media/uploads/example.jpg"
+        link-label="Link"
+        link-url="#"
+      ></SlideShowSlide>
+      <SlideShowSlide
+        title="Second Slide"
+        image="/media/uploads/example.jpg"
+        link-label="Link"
+        link-url="#"
+      ></SlideShowSlide>
+      <SlideShowSlide
+        title="Third Slide"
+        image="/media/uploads/example.jpg"
+        link-label="Link"
+        link-url="#"
+      ></SlideShowSlide>
+    </SlideShow>
+
+  </section>
+
+  <section class="styleguide__section-component">
+    <h1 class="styleguide__section-component__title">Teasers in grid</h1>
+
+    <div class="teaser__grid">
+
+      <div class="teaser__wrapper">
+
+        <div class="teaser__text">
+          <p class="teaser__text-content">Some text over the image</p>
+          <p class="teaser__text-content teaser__text-content__link"><a href="#" class="link__button-white-secondary">Link</a></p>
+        </div>
+
+        <SrcSet
+          className="teaser__element"
+          src="/media/uploads/example.jpg"
+          sizes="
+            (max-width: 730px) 100vw,
+            (max-width: 1024px) 33vw,
+            325px" ></SrcSet>
+
+      </div> <!-- teaser__wrapper -->
+
+      <div class="teaser__wrapper">
+
+        <div class="teaser__text">
+          <p class="teaser__text-content">Some text over the image</p>
+          <p class="teaser__text-content teaser__text-content__link"><a href="#" class="link__button-white-secondary">Link</a></p>
+        </div>
+
+        <SrcSet
+          className="teaser__element"
+          src="/media/uploads/example.jpg"
+          sizes="
+            (max-width: 730px) 100vw,
+            (max-width: 1024px) 33vw,
+            325px" ></SrcSet>
+
+      </div> <!-- teaser__wrapper -->
+
+      <div class="teaser__wrapper">
+
+        <div class="teaser__text">
+          <p class="teaser__text-content">Some text over the image</p>
+          <p class="teaser__text-content teaser__text-content__link"><a href="#" class="link__button-white-secondary">Link</a></p>
+        </div>
+
+        <SrcSet
+          className="teaser__element"
+          src="/media/uploads/example.jpg"
+          sizes="
+            (max-width: 730px) 100vw,
+            (max-width: 1024px) 33vw,
+            325px" ></SrcSet>
+
+      </div> <!-- teaser__wrapper -->
+
+    </div> <!-- teaser__grid -->
+
+  </section>
+
+  <section class="styleguide__section-component">
+    <h1 class="styleguide__section-component__title">Teaser with image and text side-by-side</h1>
+
+    <BlogTeaser
+      title="Some text next to the image"
+      image="/media/uploads/example.jpg"
+      more="Link"
+      url="#"
+    ></BlogTeaser>
+    <BlogTeaser
+      title="Some text next to the image"
+      image="/media/uploads/example.jpg"
+      more="Link"
+      url="#"
+    ></BlogTeaser>
+    <BlogTeaser
+      title="Some text next to the image"
+      image="/media/uploads/example.jpg"
+      more="Link"
+      url="#"
+    ></BlogTeaser>
+    <BlogTeaser
+      title="Some text next to the image"
+      image="/media/uploads/example.jpg"
+      more="Link"
+      url="#"
+    ></BlogTeaser>
+
+  </section>
+
+  <!-- Quotes Slider -->
+  <h2 class="section-component__subtitle">Quotes Slider</h2>
+
+  <section class="styleguide__section-component">
+    <Quotes>
+      <Quote
+        author="Author Rothua"
+        occupation="Great quoter"
+        picture="/media/uploads/example_profile.jpg"
+        text="Lorem ipsum dolor sit amet, dicit alienum et vim, ut vel option persecuti maiestatis! Choro malorum argumentum no sea! Convenire tincidunt no his, labitur tibique sententiae cum ex. Duo meis scaevola accusamus cu, pri et dolor melius minimum. Cu ius nostrud urbanitas, feugiat graecis convenire nec an."
+      ></Quote>
+      <Quote
+        author="Rothua Author"
+        occupation="Sayer of things"
+        picture="/media/uploads/lady.jpg"
+        text="Lorem ipsum dolor sit amet, sea nonumy noster labitur ea, pro ut commodo conclusionemque, ne nulla forensibus pro. Debet tollit integre et est. Option alienum."
+      ></Quote>
+    </Quotes>
+  </section>
+
+  <!-- Profiles -->
+  <h2 class="section-component__subtitle">Profile</h2>
+
+  <section class="styleguide__section-component">
+    <div class="profile">
+      <PersonCard
+        link="#"
+        image="/media/uploads/example_profile.jpg"
+        name="Person"
+        fullname="Name of the person"
+        summary="Nullam varius tellus non velit euismod, vel commodo quam dapibus. Proin dictum est augue, sit amet pretium lacus accumsan et.">
+      </PersonCard>
+    </div>
+  </section>
+
+  <!-- Amenities -->
+  <h2 class="section-component__subtitle">Amenities</h2>
+
+  <section class="styleguide__section-component">
+    <ul class="location__amenities">
+      <Amenity icon="connection" title="High Speed Internet"></Amenity>
+      <Amenity icon="printer" title="Printer"></Amenity>
+      <Amenity icon="mug" title="Water, Coffee, Fruits"></Amenity>
+      <Amenity icon="shower" title="Shower"></Amenity>
+      <Amenity icon="month_calendar" title="Events"></Amenity>
+      <Amenity icon="headphones" title="Lounge"></Amenity>
+      <Amenity icon="kitchen" title="Kitchenette"></Amenity>
+      <Amenity icon="locker" title="Locker"></Amenity>
+      <Amenity icon="books" title="Community library"></Amenity>
+      <Amenity icon="cleaning" title="Cleaning"></Amenity>
+      <Amenity icon="community_manager" title="Community Manager"></Amenity>
+      <Amenity icon="2_users" title="Multiple Users"></Amenity>
+      <Amenity icon="announce" title="Announce"></Amenity>
+      <Amenity icon="clock" title="Clock"></Amenity>
+      <Amenity icon="view" title="Panoramic view"></Amenity>
+    </ul>
+  </section>
+
+  <!-- Form -->
+  <h2 class="section-component__subtitle">Form</h2>
+
+  <section class="styleguide__section-component">
+
+     <form class="contact-form" action="#">
+
+      <input class="contact-form__input" type="text" name="name" value="Your name">
+
+      <input class="contact-form__input" type="text" name="email" value="Your Email">
+
+
+      <div class="contact-form__input__radio__wrapper">
+        <label class="contact-form__input__radio">
+          Option
+          <input type="radio" class="contact-form__input__radio__input" name="option_name1">
+          <span class="contact-form__input__radio__checkmark"></span>
+        </label>
+      </div>
+
+
+      <div class="contact-form__input__radio__wrapper">
+        <label class="contact-form__input__radio">
+          Option
+          <input type="radio" class="contact-form__input__radio__input" name="option_name1">
+          <span class="contact-form__input__radio__checkmark"></span>
+        </label>
+      </div>
+
+      <div class="contact-form__input__checkbox__wrapper">
+        <label class="contact-form__input__checkbox" for="option_name1">
+          Option
+          <input type="checkbox" id="option_name1" class="contact-form__input__checkbox__input" name="option_name1">
+          <span class="contact-form__input__checkbox__checkmark"></span>
+        </label>
+      </div>
+
+
+      <div class="contact-form__submit-wrapper">
+        <input class="contact-form__submit"  type="submit" value="Submit">
+      </div>
+    </form>
+  </section>
+
+  <!-- Table -->
+  <h2 class="section-component__subtitle">Table</h2>
+
+  <section class="styleguide__section-component">
+
+    <div class="table">
+
+      <div class="table__row">
+        <h2 class="table__row-title">Table title</h2>
+      </div>
+
+      <div class="table__row">
+
+        <div class="table__column">
+          <p class="table__column-value">Value 1</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 2 <br> Value 2.2<br> Value 2.3</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 3</p>
+        </div> <!-- table__column -->
+
+      </div> <!-- table__row -->
+
+      <div class="table__row">
+
+        <div class="table__column">
+          <p class="table__column-value">Value 1<br> Value 1.2</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 2</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 3</p>
+        </div> <!-- table__column -->
+
+      </div> <!-- table__row -->
+
+      <div class="table__row">
+
+        <div class="table__column">
+          <p class="table__column-value">Value 1</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 2</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 3 <br> Value 3.2<br> Value 3.3  <br> Value 3.4<br> Value 3.5</p>
+        </div> <!-- table__column -->
+
+      </div> <!-- table__row -->
+
+
+      <div class="table__row">
+
+        <div class="table__column">
+          <p class="table__column-value">Value 1</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 2</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 3</p>
+        </div> <!-- table__column -->
+
+      </div> <!-- table__row -->
+
+
+      <div class="table__row">
+
+        <div class="table__column">
+          <p class="table__column-value">Value 1</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 2</p>
+        </div> <!-- table__column -->
+
+        <div class="table__column">
+          <p class="table__column-value">Value 3</p>
+        </div> <!-- table__column -->
+
+      </div> <!-- table__row -->
+
+
+    </div> <!-- table -->
+
+  </section>
+
+</div>

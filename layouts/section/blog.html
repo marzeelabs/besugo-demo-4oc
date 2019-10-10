@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+  <section class="layout-container">
+    <h1 class="blog__title">{{ .Params.pagetitle }}</h1>
+
+    <p class="blog__text-intro">
+      {{ .Content }}
+    </p>
+
+    <ul class="blog__list">
+      {{ range .Data.Pages }}
+        {{ .Render "li"}}
+      {{ end }}
+    </ul>
+  </section>
+
+{{ end }}

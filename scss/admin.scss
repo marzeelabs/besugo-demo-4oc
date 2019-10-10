@@ -1,0 +1,13 @@
+// Init file to import sass vendors
+@import "init/init";
+
+//Normalize
+@import "base/normalize";
+
+// Layout styles
+@import "base/layout";
+
+// Base components
+@import
+  "components/custom-locale-selector",
+  "components/custom-login-message";

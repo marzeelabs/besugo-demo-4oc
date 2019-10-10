@@ -1,0 +1,50 @@
+<TopHeader
+  locale="{{ .Site.Language.Lang }}"
+  homelink="{{ .Site.BaseURL | relLangURL }}"
+  activeurl="{{ .URL }}"
+>
+
+  {{ partial "locale_switcher" . }}
+
+  {{ $navigation := $.Site.Data.navigation }}
+  {{ range $.Site.Data.navigation }}
+    {{ if and (eq .title "Header") (or (not $.Site.IsMultiLingual) (eq .i18nlanguage $.Site.Language.Lang)) }}
+      {{ $navigation = . }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $navigation.links }}
+    {{ $title := "" }}
+    {{ $url := "" }}
+    {{ $external := "false" }}
+
+    {{ if or (eq .title "Locations") (eq .title "Localizações") }}
+      {{ $title = i18n "Locations" }}
+      {{ $url = "[locations]" }}
+    {{ else }}
+      {{ $title = .title }}
+
+      {{ if and (isset . "path") (ne .path "") }}
+        {{ if hasPrefix .path "/" }}
+          {{ $url = .path | relLangURL }}
+        {{ else }}
+          {{ $url = .path }}
+          {{ $external = "true" }}
+        {{ end }}
+      {{ else }}
+        {{ range where (where $.Site.RegularPages "Section" "pages") "Title" .title }}
+          {{ $url = .URL }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if ne $title "" }}
+      <Link label="{{ $title }}" url="{{ $url }}" external="{{ $external }}"></Link>
+    {{ end }}
+  {{ end }}
+
+  {{ range where $.Site.RegularPages "Section" "location" }}
+    <Location label="{{ .Title }}" url="{{ .URL }}" image="{{ .Params.header }}"></Location>
+  {{ end }}
+
+</TopHeader>

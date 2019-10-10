@@ -1,0 +1,44 @@
+<EndFooter hidden="true"
+  homelink="{{ .Site.BaseURL | relLangURL }}"
+>
+  {{ if (eq $.Site.Language.Lang "pt") }}
+    <Copyright>{{ jsonify (markdownify $.Site.Data.settings.footer_pt) }}</Copyright>
+  {{ else }}
+    <Copyright>{{ jsonify (markdownify $.Site.Data.settings.footer_en) }}</Copyright>
+  {{ end }}
+
+  {{ $navigation := $.Site.Data.navigation }}
+  {{ range $.Site.Data.navigation }}
+    {{ if and (eq .title "Footer") (or (not $.Site.IsMultiLingual) (eq .i18nlanguage $.Site.Language.Lang)) }}
+      {{ $navigation = . }}
+    {{ end }}
+  {{ end }}
+
+  {{ range $navigation.links }}
+    {{ $title := .title }}
+    {{ $url := "" }}
+    {{ $external := "false" }}
+
+    {{ if and (isset . "path") (ne .path "") }}
+      {{ if hasPrefix .path "/" }}
+        {{ $url = .path | relLangURL }}
+      {{ else }}
+        {{ $url = .path }}
+        {{ $external = "true" }}
+      {{ end }}
+    {{ else }}
+      {{ range where (where $.Site.RegularPages "Section" "pages") "Title" .title }}
+        {{ $url = .URL }}
+      {{ end }}
+    {{ end }}
+
+    {{ if ne $title "" }}
+      <Link label="{{ $title }}" url="{{ $url }}" external="{{ $external }}"></Link>
+    {{ end }}
+  {{ end }}
+
+  {{ range $.Site.Data.settings.social }}
+    <Social name="{{ .name }}" value="{{ .link }}"></Social>
+  {{ end }}
+
+</EndFooter>

@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+  <div class="page-main page-main--simple">
+    <section class="layout-container">
+      <h1 class="profiles__title">{{ .Params.pagetitle }}</h1>
+
+      <div class="profiles__text-intro">
+        {{ .Content }}
+      </div>
+
+      <ul class="profiles__list">
+        {{ range .Data.Pages }}
+          {{ .Render "li" }}
+        {{ end }}
+      </ul>
+
+    </section>
+  </div>
+
+{{ end }}

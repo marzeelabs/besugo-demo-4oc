@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<PageSimple
+  title="{{ .Title }}"
+  subtitle="{{ .Params.subtitle }}"
+  image="{{ .Params.Image }}"
+>
+  <Content>
+    {{ jsonify .Content }}
+  </Content>
+</PageSimple>
+
+{{ end }}

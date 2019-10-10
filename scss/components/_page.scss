@@ -1,0 +1,144 @@
+
+/*
+** page titles hover image
+*/
+
+%page-main,
+.page-main {
+  margin: ritmo(8) auto 0;
+
+  @include mq($from: break-large) {
+    margin: ritmo(16) auto 0;
+  }
+}
+
+.page-main--simple {
+  margin: ritmo(16) auto 0;
+
+  @include mq($from: break-large) {
+    margin: ritmo(35) auto 0;
+  }
+}
+
+.page-main--simple {
+  margin: ritmo(16) auto 0;
+
+   @include mq($from: break-large) {
+    margin: ritmo(29) auto 0;
+  }
+}
+
+%page__header {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: ritmo(12);
+
+  @include mq($from: break-medium) {
+    margin-top: ritmo(16);
+  }
+}
+
+%page-home__header--video-bg {
+
+  @include mq($from: break-big) {
+    height: 75vh;
+  }
+}
+
+%page__header-title-wrapper {
+  flex: 0 0 100%;
+  align-content: center;
+  text-align: center;
+  padding: ritmo(5) 10px;
+  position: relative;
+  z-index: 5;
+}
+
+%page__header-title {
+  font-weight: 400;
+  color: palette(white);
+}
+
+%page__header-subtitle {
+  @include ritmo-font-size($h4-font-size);
+}
+
+%page__header--no-bg {
+  height: auto;
+  min-height: 120px;
+  padding: 20px 0;
+  overflow: visible;
+  background: palette(brand);
+  margin-bottom: 40px;
+  // background-image: url("/media/header_bg.jpg");
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @include mq($from: break-medium-large) {
+    height: auto;
+    padding: 40px 0;
+    min-height: 250px;
+  }
+
+  @include mq($from: break-big) {
+    background-position: center center;
+    padding: 80px 0;
+    height: auto;
+  }
+
+  %page__header-title-wrapper {
+    @extend %layout-container--inner;
+    align-content: flex-start;
+    text-align: left;
+    padding: ritmo(5) 10px;
+  }
+
+  %page__header-title {
+    //color: palette(brand, light);
+    margin-top: 50px;
+
+    @include mq($from: break-medium-large) {
+      @include ritmo-font-size(48px);
+    }
+  }
+
+  %page__header-subtitle {
+    margin-top: 0;
+
+    @include mq($from: break-medium-large) {
+      @include ritmo-font-size($h4-font-size);
+    }
+  }
+}
+
+/*
+** page titles
+*/
+
+%page__title {
+  text-transform: uppercase;
+  text-align: center;
+  @include ritmo-font-size($h5-font-size);
+  margin-top: ritmo(4);
+
+  @include mq($from: break-medium) {
+    margin-top: ritmo(6);
+  }
+}
+
+%page__text-intro {
+  @include container(1000px);
+  display: block;
+  margin: 0 auto ritmo(6) auto;
+  text-align: center;
+}
