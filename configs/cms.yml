@@ -3,7 +3,7 @@ backend:
   accept_roles:
     - admin
     - editor
-  repo: marzeelabs/besugo-demo-devops # Path to your Github repository
+  repo: marzeelabs/besugo-demo-4oc # Path to your Github repository
   branch: <% CURRENT_BRANCH %> # Branch to update (current branch dynamically set by Gulp)
 
 media_folder: "/static/media/uploads" # Folder where user uploaded files should go
