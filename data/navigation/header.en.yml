@@ -11,3 +11,5 @@ links:
   - title: About us
   - title: Contact us
     path: /contact-us
+  - title: Styleguide
+    path: /styleguide

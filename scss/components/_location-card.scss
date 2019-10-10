@@ -1,0 +1,38 @@
+.location-card__link {
+  @extend %teaser__wrapper;
+  margin: ritmo(2) auto;
+
+  @include mq($from: break-medium) {
+    height: 400px;
+    padding: 0;
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+.location-card__content {
+  @extend %teaser__text;
+  pointer-events: none;
+  padding: 10px 30px 30px;
+  transition: padding-bottom ease .35s;
+
+  .location-card__link:hover & {
+    padding-bottom: 50px;
+  }
+}
+
+.location-card__title {
+  color: palette(brand, light);
+  text-align: center;
+  margin: 0 auto;
+  font-size: $h4-font-size;
+}
+
+.location-card__image {
+  @extend %teaser__element;
+  filter: grayscale(.4) brightness(.65);
+  transition: filter ease .35s;
+
+  .location-card__link:hover & {
+    filter: grayscale(.4) brightness(.35);
+  }
+}

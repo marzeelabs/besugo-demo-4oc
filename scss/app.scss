@@ -47,10 +47,12 @@
 
 // Content type components
 @import
+  "components/location-card",
   "components/quotes";
 
 // Content types and pages
 @import
+  "components/page-home",
   "components/page-simple",
   "components/location",
   "components/plans",

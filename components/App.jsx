@@ -15,6 +15,7 @@ import Amenity from 'location/Amenity';
 import BlogPost from 'blog/Post';
 import BlogTeaser from 'blog/Teaser';
 import Location from 'location/Location';
+import PageHome from 'page/Home';
 import PageSimple from 'page/Simple';
 import Person from 'people/Person';
 import PersonCard from 'people/Card';
@@ -38,6 +39,7 @@ import Quotes from 'partials/Quotes';
   BlogPost,
   BlogTeaser,
   Location,
+  PageHome,
   PageSimple,
   Person,
   PersonCard,

@@ -1,5 +1,42 @@
 {{ define "main" }}
 
-  {{ partial "styleguide.html" . }}
+  {{ with .Site.GetPage "homepage" }}
+    <Homepage
+      title="{{ .Params.pagetitle }}"
+      header="{{ .Params.header }}"
+      welcometitle="{{ .Params.welcometitle }}"
+      quotestitle="{{ .Params.quotestitle }}"
+
+      {{ range $.Site.Data.reservations }}
+        {{ if eq .i18nlanguage $.Site.Language.Lang }}
+          reservationtitle="{{ .SectionSubtitle }}"
+        {{ end }}
+      {{ end }}
+    >
+      <Content>
+        {{ jsonify .Content }}
+      </Content>
+
+      {{ range .Params.quotes }}
+        <HomepageQuote
+          author="{{ .author }}"
+          occupation="{{ .occupation }}"
+          picture="{{ .picture }}"
+          text="{{ .text }}"
+        ></HomepageQuote>
+      {{ end }}
+
+      {{ range where $.Site.RegularPages "Section" "location" }}
+        <HomepageLocation
+          title="{{ .Title }}"
+          url="{{ .URL }}"
+          teaser="{{ .Params.teaser }}"
+          image="{{ .Params.header }}"
+        ></HomepageLocation>
+      {{ end }}
+
+      {{ partial "reservation-data.html" . }}
+    </Homepage>
+  {{ end }}
 
 {{ end }}
