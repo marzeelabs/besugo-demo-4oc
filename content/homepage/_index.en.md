@@ -2,7 +2,6 @@
 i18nlanguage: en-i
 title: Enter here to edit.
 pagetitle: Co-creating experiences and empowering diverse communities.
-header: /media/uploads/io-1-intro.mp4
 welcometitle: Welcome to Besugo - your new online space.
 quotestitle: Everyone ❤ Chocolate
 quotes:
